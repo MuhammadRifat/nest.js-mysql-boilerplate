@@ -1,4 +1,4 @@
-# POS Backend
+# Boilerplate Nest.js and MySQL
 
 ## Installation
 
