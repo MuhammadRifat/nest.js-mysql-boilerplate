@@ -19,6 +19,12 @@ $ npm run dev
 $ npm run prod
 ```
 
+## CRUD Generate
+
+```bash
+$ npm run generate:crud module-name
+```
+
 ## Test
 
 ```bash
