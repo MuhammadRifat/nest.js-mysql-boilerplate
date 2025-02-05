@@ -2,8 +2,9 @@ import { InternalServerErrorException } from "@nestjs/common";
 import { Knex } from "knex";
 import { IPaginate } from "../dtos/dto.common";
 import * as crypto from 'crypto';
-import { DB_TABLES, SELECT_FIELDS } from "../enums/db.enum";
+import { DB_TABLES } from "../enums/db.enum";
 import { fi } from "@faker-js/faker/.";
+import { SELECT_FIELDS } from "../enums/select-fileds.enum";
 
 export class MysqlService<TDoc> {
     private DEFAULT_LIMIT = 10;

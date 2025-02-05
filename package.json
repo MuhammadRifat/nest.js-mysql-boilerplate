@@ -21,7 +21,8 @@
     "migration": "knex migrate:up",
     "migration:all": "knex migrate:latest",
     "migration:rollback": "knex migrate:rollback",
-    "seed": "knex seed:run"
+    "seed": "knex seed:run",
+    "generate:crud": "ts-node scripts/generate-crud.ts"
   },
   "dependencies": {
     "@nestjs/cache-manager": "^2.3.0",

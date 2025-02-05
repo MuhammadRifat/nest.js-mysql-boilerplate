@@ -1,7 +1,6 @@
 import { Controller, Get, Body, Patch, Param, Delete, Query, HttpException, UseGuards } from '@nestjs/common';
 import { UserService } from './user.service';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { IPaginate } from 'src/common/dtos/dto.common';
 import { ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from 'src/common/guards/jwt-auth.guard';
 import { GetUser } from 'src/common/decorators/user.decorator';
