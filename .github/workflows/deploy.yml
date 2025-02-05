@@ -1,0 +1,31 @@
+name: boilerplate
+
+on:
+  push:
+    branches:
+      - boilerplate
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-22.04
+
+    steps:
+
+      - name: Deploy to server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            # Commands to deploy the application on the server
+            cd projects/directory
+            git stash
+            git pull origin boilerplate --no-ff
+            npm run migration:all
+            yarn
+            yarn build
+            pm2 stop api
+            pm2 delete api
+            pm2 start "yarn prod" --name api
