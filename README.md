@@ -25,6 +25,15 @@ $ npm run prod
 $ npm run generate:crud module-name
 ```
 
+## DB Migration
+
+```bash
+$ npm run migration
+$ npm run migration:all
+$ npm run migration:rollback
+$ npm run seed
+```
+
 ## Test
 
 ```bash
